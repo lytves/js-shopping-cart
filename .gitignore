@@ -38,4 +38,3 @@ yarn-error.log*
 .idea/modules.xml
 .idea/*.iml
 .idea/modules
-*.iml
