@@ -8,8 +8,14 @@ body {
     padding: 0;
     font-family: sans-serif;
     line-height: 1.7;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
+/*************************
+container-products
+ *************************/
 .container-products {
     display: flex;
     flex-wrap: wrap;
@@ -55,4 +61,28 @@ body {
     background: none;
     font-family: inherit;
     font-size: inherit;
+}
+
+.item-btn-active {
+    border: 1px solid transparent;
+    background-image: linear-gradient(to right top, #e5e7e9, #c7ddef, #a4d4f5, #77cbf9, #20c3fc);
+}
+/*************************
+container-counter
+ *************************/
+.container-counter {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/shopping-cart.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-weight: bold;
+    cursor: pointer;
+    color: #224e96;
+    margin: 10px;
 }
