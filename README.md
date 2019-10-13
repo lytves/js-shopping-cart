@@ -1,7 +1,7 @@
 # JavaScript shopping cart
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/lytves/vue-basic-authentication-example/blob/master/LICENSE)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ae441a0e-5def-4635-aeb2-b3b489449cf6/deploy-status)](https://app.netlify.com/sites/elastic-davinci-b7d0b8/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bbcf3c4d-8e1e-48f2-a9cb-aee321a468b3/deploy-status)](https://app.netlify.com/sites/tender-minsky-fa17f8/deploys)
 
 En example of implementation a shopping cart for the Online Store on vanilla JavaScript and CSS.
 
