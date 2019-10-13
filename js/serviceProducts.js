@@ -20,6 +20,7 @@ class ServiceProducts {
         for (let product of this.productsCatalog) {
 
             let itemButtonClass, itemButtonText;
+
             if (cartProducts.indexOf(product.id) === -1) {
                 itemButtonClass = '';
                 itemButtonText = 'Add to Cart';
@@ -28,26 +29,26 @@ class ServiceProducts {
                 itemButtonText = 'Remove from Cart';
             }
 
-            let item = this.buildElement({
+            let item = serviceBuildElement.buildElement({
                 tagName: 'div',
                 className: 'item '
             });
-            let itemTitle = this.buildElement({
+            let itemTitle = serviceBuildElement.buildElement({
                 tagName: 'div',
                 className: 'item-title',
                 innerText: product.name
             });
-            let itemImg = this.buildElement({
+            let itemImg = serviceBuildElement.buildElement({
                 tagName: 'div',
                 className: 'item-img',
                 backgroundImage: product.img
             });
-            let itemPrice = this.buildElement({
+            let itemPrice = serviceBuildElement.buildElement({
                 tagName: 'div',
                 className: 'item-price',
                 innerText: product.price.toLocaleString() + " €"
             });
-            let itemButton = this.buildElement({
+            let itemButton = serviceBuildElement.buildElement({
                 tagName: 'div',
                 className: 'item-btn' + itemButtonClass,
                 innerText: itemButtonText,
@@ -77,33 +78,6 @@ class ServiceProducts {
         }
         this.container.appendChild(itemsWrapper);
     }
-
-    buildElement(options) {
-        let element = document.createElement(options.tagName);
-
-        if ('className' in options) {
-            element.className = options.className;
-        }
-
-        if ('innerText' in options) {
-            element.innerText = options.innerText;
-        }
-
-        if ('backgroundImage' in options) {
-            element.style.backgroundImage = `url(img/${options.backgroundImage})`;
-
-        }
-
-        if ('id' in options) {
-            element.setAttribute("data-id", options.id)
-        }
-
-        return element;
-    }
-
-    actions() {
-
-    }
 }
 
-let serviceProducts = new ServiceProducts('.container-products', '.container-counter',productsCatalog);
+let serviceProducts = new ServiceProducts('.container-products', '.container-counter', productsCatalog);
